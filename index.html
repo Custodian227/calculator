@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>CalculatorApp</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -20,40 +20,48 @@
         <main>
             <div id="calculator-container">
                 <div id="calculator">
-                    <div id="input-field">
-                        <p id="input-content"></p>
+
+                    <div id="display-field">
+                        <div id="data-previous-operand"></div>
+                        <div id="data-current-operand"></div>
                     </div>
-                    <div class="calculator-section-flex" id="clear-equals-section">
+                    <div id="clear-delete-section" class="calculator-section-flex" >
                         <div>
-                            <button class="button-general button-operator" id="button-clear">Clear</button>
+                            <button id="button-clear-all" class="button-general" value="Clear">CA</button>
                         </div>
                         <div>
-                            <button class="button-general button-operator" id="button-equals">=</button>
+                            <button id="button-delete" class="button-general" value="DEL">DEL</button>
                         </div>
+                        <div>
+                            <button id="button-percent" class="button-general button-operator" value="%">mod</button>
+                        </div>
+                        <div>
+                            <button class="button-general button-operator">/</button>
+                        </div> 
                     </div>
                     <div class="calculator-section-flex" id="third-row">
                         <div>
-                            <button class="button-general button-number">7</button>
+                            <button class="button-general button-number" data-key="7">7</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">8</button>
+                            <button class="button-general button-number" data-key="8">8</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">9</button>
+                            <button class="button-general button-number" data-key="9">9</button>
                         </div>
                         <div>
-                            <button class="button-general button-operator">+</button>
+                            <button id="button-plus" class="button-general button-operator">*</button>
                         </div>
                     </div>
                     <div class="calculator-section-flex" id="fourth-row">
                         <div>
-                            <button class="button-general button-number">4</button>
+                            <button class="button-general button-number" data-key="4">4</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">5</button>
+                            <button class="button-general button-number" data-key="5">5</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">6</button>
+                            <button class="button-general button-number" data-key="6">6</button>
                         </div>
                         <div>
                             <button class="button-general button-operator">-</button>
@@ -61,40 +69,44 @@
                     </div>
                     <div class="calculator-section-flex" id="fifth-row">
                         <div>
-                            <button class="button-general button-number">1</button>
+                            <button id="button-one" class="button-general button-number"  data-key="1">1</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">2</button>
+                            <button class="button-general button-number" data-key="2">2</button>
                         </div>
                         <div>
-                            <button class="button-general button-number">3</button>
+                            <button class="button-general button-number" data-key="3">3</button>
                         </div>
                         <div>
-                            <button class="button-general button-operator">x</button>
+                            <button class="button-general button-operator">+</button>
                         </div>
                     </div>
                     <div class="calculator-section-flex" id="sixth-row">
-                        <div>
+                        <div id="point-zero-section">
+                            <div>
+                                <button class="button-general button-number" value="0">0</button>
+                            </div>
+                            <div>
+                                <button id="button-floating-point" class="button-general button-number" value=".">.</button>
+                            </div>
                         </div>
                         <div>
-                            <button class="button-general button-number">0</button>
-                        </div>
-                        <div>
-                        </div>
-                        <div>
-                            <button class="button-general button-operator">/</button>
-                        </div>
+                            <button id="button-equals" class="button-general">=</button>
+                        </div> 
                     </div>
+                    
                 </div>
             </div>
         </main>
+
+        <footer>
+            <div id="footer-container">
+                <p>Developed as part of The Odin Project curriculum</p>
+            </div>
+        </footer>
     </div>
-   
 
-
-    <script href="calculator.js">
-
-    </script>
+    <script src="calculator.js"></script>
 </body>
 
 </html>
